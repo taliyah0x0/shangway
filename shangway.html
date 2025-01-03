@@ -3,9 +3,17 @@
         <link rel="stylesheet" href="shangway.css">
     </head>
     <div style="display: flex; flex-direction: column">
-        <div style="display: flex; flex-direction: row" id="textareas">
-            <textarea style="width: 50vw; height: 20vh" id="input-area"></textarea>
-            <textarea style="width: 50vw; height: 20vh" id="output-area"></textarea>
+        <div style="display: flex; flex-direction: row">
+            <div style="display: flex; flex-direction: column">
+                <h3 style="height: 50px; margin: 0">Romanized Shanghainese</h3>
+                <div style="width: 45vw; height: 20vh; position: absolute; top: 58px; color: transparent" id="highlight-area" class="textareas"></div>
+                <div contenteditable style="width: 45vw; height: 20vh; position: relative;" id="input-area" oninput="initiate()" onclick="initiate()" class="textareas"></div>
+            </div>
+            <div style="display: flex; flex-direction: column">
+                <h3 style="height: 50px; margin: 0">Hanzi</h3>
+                <div style="width: 45vw; height: 20vh; position: absolute; left: 50vw; top: 58px; color: transparent;" id="highlight-area-2" class="textareas"></div>
+                <div style="width: 45vw; height: 20vh; position: absolute; left: 50vw; top: 58px" id="output-area" class="textareas"></div>
+            </div>
         </div>
         <div id="options-wrapper"></div>
     </div>
